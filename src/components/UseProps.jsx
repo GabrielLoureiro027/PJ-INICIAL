@@ -1,18 +1,33 @@
-import React from 'react'
-import style from './UseProps.module.css'
+import React from "react";
+import style from "./UseProps.module.css";
 
-const UseProps = () => {
-
-    const imgPadrao = "https://voxnews.com.br/wp-content/uploads/2017/04/unnamed.png"
-
-    return (
+const UseProps = (props) => {
+  console.log(props);
+  return (
     <div className={style.card}>
-        <img src={imgPadrao} alt="" className={style.img}/>
-      <h4>Titulo do Card</h4>
-      <p>Descrição do Card</p>
+      <img src={props.imagem} alt="" className={style.img} />
+      <h4>{props.titulo}</h4>
+      <p>{props.descricao}</p>
       <button className={style.botao}>Visualizar</button>
     </div>
-  )
-}
+  );
+};
 
-export default UseProps
+export default UseProps;
+
+// import React from "react";
+// import style from "./UseProps.module.css";
+
+// const UseProps = (props) => {
+//   console.log(props);
+//   return (
+//     <div className={style.card}>
+//       <img src={props.imagem} alt="" className={style.img} />
+//       <h4>{props.titulo}</h4>
+//       <p>{props.descricao}</p>
+//       <button className={style.botao}>Visualizar</button>
+//     </div>
+//   );
+// };
+
+// export default UseProps;
